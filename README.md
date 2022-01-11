@@ -23,7 +23,7 @@ O-Net was trained for 600 epochs with learning rates 0.01, 0.005 and 0.001 that 
 
 **Testing**
 
-Metric used was AUC CED — area under graph of cumulative error distribution, error — Root Mean Square Error (RMSE) normalized by image's width and height, i.e. divided square root of their product. X-axis of the graph is error, Y-axis — percentage of images for which error is less than x-value. Max error value used is 0.08.
+Metric used was AUC CED — area under graph of cumulative error distribution, error — Root Mean Square Error (RMSE) normalized by image's width and height, i.e. divided by square root of their product. X-axis of the graph is error, Y-axis — percentage of images for which error is less than x-value. Max error value used is 0.08.
 
 ![Screenshot from 2022-01-11 22-57-11](https://user-images.githubusercontent.com/65346868/149019848-a1bbaf38-a798-459c-bc28-353fcfcf737c.png)
 > Cumulative error distribution graph for O-Net.
