@@ -10,7 +10,6 @@ O-Net is a convolutional neural network that was suggested in paper [Joint Face 
 
 **Data**
 
-Datasets used:
 - [Menpo](https://ibug.doc.ic.ac.uk/resources/2nd-facial-landmark-tracking-competition-menpo-ben/)
 - [300W](https://ibug.doc.ic.ac.uk/resources/300-W/)
 
@@ -29,7 +28,7 @@ Metric used was AUC CED — area under graph of cumulative error distribution, e
 ![Screenshot from 2022-01-11 22-57-11](https://user-images.githubusercontent.com/65346868/149019848-a1bbaf38-a798-459c-bc28-353fcfcf737c.png)
 > Cumulative error distribution graph for O-Net.
 
-I also calculated stated metric for DLIB's shape predictor (that is also designed for 68 landmarks). The results were pretty much the same, you can see them in the notebook mentioned below.
+I also calculated stated metric for DLIB's shape predictor (that is also designed for 68 landmarks). The results were pretty much the same, you can see them in the notebook mentioned below. Both models were tested on test part of Menpo dataset since DLIB's shape predictor was trained on 300W.
 
 **Code (Kaggle)**
 
