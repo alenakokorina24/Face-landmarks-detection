@@ -8,26 +8,22 @@ O-Net is a convolutional neural network that was suggested in paper [Joint Face 
 ![11212517PDTi2RyD](https://user-images.githubusercontent.com/65346868/149015994-4f887f36-4f2a-44da-aee4-310886197cb7.jpg)
 > Face landmarks annotation in the IBUG 68 points format.
 
----
 
 **Data**
 
 - [Menpo](https://ibug.doc.ic.ac.uk/resources/2nd-facial-landmark-tracking-competition-menpo-ben/)
 - [300W](https://ibug.doc.ic.ac.uk/resources/300-W/)
 
----
 
 **DLIB face detection**
 
 I used DLIB C++ Library's face detector to create dataset of pictures of already cropped faces.
 
----
 
 **Training**
 
 O-Net was trained for 600 epochs with learning rates 0.01, 0.005 and 0.001 that changed every 200 epochs. Training for less number of epochs didn't get any good results with any parameters. Also some augmentations were applied to achieve better performance. I tried horizontal flip, moving bounding box predicted by DLIB, contrast and brightness changing. There's also rotate augmentation but it leaves black spaces after rotation and this problem still needs to be solved to try to make the augmentation somewhat useful (otherwise it doesn't affect network's performance in any way).
 
----
 
 **Testing**
 
@@ -37,12 +33,10 @@ I also calculated the metric for DLIB's shape predictor (that is also designed f
 ![Screenshot from 2022-01-11 22-57-11](https://user-images.githubusercontent.com/65346868/149019848-a1bbaf38-a798-459c-bc28-353fcfcf737c.png)
 > Cumulative error distribution graph for O-Net.
 
----
 
 ![Screenshot from 2022-01-12 04-03-24](https://user-images.githubusercontent.com/65346868/149021166-945a3039-e560-4b13-a5fe-5a8499291e30.png)
 > O-Net results visualization.
 
----
 
 **Code (Kaggle)**
 
