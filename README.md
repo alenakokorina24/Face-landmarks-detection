@@ -37,7 +37,6 @@ I also calculated the metric for DLIB's shape predictor (that is also designed f
 ![Screenshot from 2022-01-12 04-03-24](https://user-images.githubusercontent.com/65346868/149021166-945a3039-e560-4b13-a5fe-5a8499291e30.png)
 > O-Net results visualization.
 
----
 
 **Code (Kaggle)**
 
