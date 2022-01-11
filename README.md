@@ -30,6 +30,9 @@ Metric used was AUC CED — area under graph of cumulative error distribution, e
 
 I also calculated stated metric for DLIB's shape predictor (that is also designed for 68 landmarks). The results were pretty much the same, you can see them in the notebook mentioned below. Both models were tested on test part of Menpo dataset since DLIB's shape predictor was trained on 300W.
 
+![Screenshot from 2022-01-12 04-03-24](https://user-images.githubusercontent.com/65346868/149021166-945a3039-e560-4b13-a5fe-5a8499291e30.png)
+> O-Net results visualization.
+
 **Code (Kaggle)**
 
 - [O-Net training](https://www.kaggle.com/alenakokorina/face-landmarks-o-net-training/)
