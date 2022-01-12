@@ -25,10 +25,11 @@ I used DLIB C++ Library's face detector to create dataset of pictures of already
 O-Net was trained for 600 epochs with learning rates 0.01, 0.005 and 0.001 that changed every 200 epochs. Training for less number of epochs didn't get any good results with any parameters. Also some augmentations were applied to achieve better performance. I tried horizontal flip, moving bounding box predicted by DLIB, contrast and brightness changing. There's also rotate augmentation but it leaves black spaces after rotation and this problem still needs to be solved to try to make the augmentation somewhat useful (otherwise it doesn't affect network's performance in any way).
 
 
-**Testing**
+**Testing and comparing**
 
 Metric used was AUC CED — area under graph of cumulative error distribution, error — Root Mean Square Error (RMSE) normalized by image's width and height, i.e. divided by square root of their product. X-axis of the graph is error, Y-axis — percentage of images for which error is less than x-value. Max error value used is 0.08.
-I also calculated the metric for DLIB's shape predictor (that is also designed for 68 landmarks). The results were pretty much the same, you can see them in the notebook mentioned below. Both models were tested on test part of Menpo dataset since DLIB's shape predictor was trained on 300W.
+I also calculated the metric for DLIB's shape predictor (that is also designed for 68 landmarks). DLIB C++ Library is one of the most popular tools for face and face features detection. I achieved the same results as DLIB since the network is quite small and simple, but with further training and more augmentations I believe even this model can be trained to outperform DLIB.
+You can see the results in the notebook mentioned below. Both models were tested on test part of Menpo dataset since DLIB's shape predictor was trained on 300W.
 
 ![Screenshot from 2022-01-11 22-57-11](https://user-images.githubusercontent.com/65346868/149019848-a1bbaf38-a798-459c-bc28-353fcfcf737c.png)
 > Cumulative error distribution graph for O-Net.
